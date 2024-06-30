@@ -3,8 +3,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true })); // Add this line to parse form data
-
+app.use(express.urlencoded({ extended: true }));
 const username = "admin";
 const password = "admin";
 
@@ -17,7 +16,7 @@ app.get("/login", function(req, res){
 });
 
 app.post("/login", function(req, res){
-    const { username: userInput, password: passwordInput } = req.body; // Use req.body instead of res.body
+    const { username: userInput, password: passwordInput } = req.body;
     if (userInput === username && passwordInput === password){
         res.send("Login successful");
     } else if (userInput === username && passwordInput!== password){
