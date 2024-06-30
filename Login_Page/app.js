@@ -26,6 +26,6 @@ app.post("/login", function(req, res){
     }
 });
 
-app.listen(8080, function(){ // Remove quotes around port number
+app.listen(8080, function(){
     console.log("Server running on port 8080");
 });
